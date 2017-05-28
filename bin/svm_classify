@@ -1,0 +1,23 @@
+#!/usr/bin/env ruby
+
+# This is copied from the generated RubyGems bin stub
+# It basically runs a specified version of the gem if given
+
+version = ">= 0.a"
+
+if ARGV.first
+  str = ARGV.first
+  str = str.dup.force_encoding("BINARY") if str.respond_to? :force_encoding
+  if str =~ /\A_(.*)_\z/ and Gem::Version.correct?($1) then
+    version = $1
+    ARGV.shift
+  end
+end
+
+gem 'svmlightcli', version
+
+# Now we don't want to just load the ruby bin file, we want to execute it
+# The reason is that it may not be necessarily a ruby file, could be native
+system(Gem.bin_path('svmlightcli', 'svm_classify_native', version))
+# Capture the exit status of the binary and exit with the same
+exit($?.exitstatus)
