@@ -2,11 +2,9 @@
 
 This is a convenience gem wrapper for the [svm_light](http://svmlight.joachims.org/)
 command line binaries. No Ruby interfaces.
-After installation, it will offer 2 binaries in the path: svm_learn and svm_classify.
+After installation, it offers 2 binaries in the path: `svm_learn` and `svm_classify`.
 In other words, it is something like:
-`brew install svm_light`
-Or
-`apt-get install svm_light`
+`brew install svm_light` or `apt-get install svm_light`
 (which do not exist), but using the RubyGems way.
 
 ## Installation
@@ -29,9 +27,9 @@ Or install it yourself as:
 
 Use the binaries the same exact way you use them when compiling from source:
 
-    svm_learn ...
+    $ svm_learn ...
 
-    svm_classify ...
+    $ svm_classify ...
 
 ## Development
 
@@ -47,5 +45,5 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/hammad
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-The original license of the svm_light author is also maintained in LICENSE.txt.
+The original license of the svm_light author is also maintained in [LICENSE.txt](https://github.com/hammady/svmlightcli/blob/master/LICENSE.txt).
 
