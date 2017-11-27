@@ -18,6 +18,6 @@ gem 'svmlightcli', version
 
 # Now we don't want to just load the ruby bin file, we want to execute it
 # The reason is that it may not be necessarily a ruby file, could be native
-system(Gem.bin_path('svmlightcli', 'svm_classify_native', version))
+system(Gem.bin_path('svmlightcli', 'svm_classify', version) + '_native')
 # Capture the exit status of the binary and exit with the same
 exit($?.exitstatus)
